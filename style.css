@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --veryDarkGray: hsl(0, 0%, 17%);
+  --darkGray: hsl(0, 0%, 59%);
+}
+
+body {
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  font-family: "Rubik", sans-serif;
+}
+
+.header {
+  background-image: url(img/pattern-bg.png);
+  background-size: cover;
+  padding: 0 40px;
+  font-size: 18px;
+}
+

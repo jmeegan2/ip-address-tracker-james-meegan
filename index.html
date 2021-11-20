@@ -1,34 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png" />
+    <!-- fontawesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- style file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- leaflet CDN -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | IP Address Tracker</title>
+    <title>IP Address Tracker</title>
+  </head>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  <body>
+    <div class="header">
+      <div class="header-title"><h3>IP Address Tracker</h3></div>
 
-  IP Address Tracker
+      <div class="search-bar">
+        <div id="loading"></div>
+        <input type="text" id="ip-input" placeholder="Search for any IP address or domain" />
+        <button id="search-btn"><i class="fa fa-search"></i></button>
+      </div>
 
-  Search for any IP address or domain
+      <div class="data">
+        <section>
+          <div class="data-title">IP ADDRESS</div>
+          <div id="ipaddresss">&nbsp;</div>
+        </section>
+        <section>
+          <div class="data-title">LOCATION</div>
+          <div id="location">&nbsp;</div>
+        </section>
+        <section>
+          <div class="data-title">TIMEZONE</div>
+          <div id="timezone">&nbsp;</div>
+        </section>
+        <section>
+          <div class="data-title">ISP</div>
+          <div id="isp">&nbsp;</div>
+        </section>
+      </div>
+    </div>
 
-  IP Address
-  Location
-  Timezone
-    UTC <!-- add offset value dynamically using the API -->
-  ISP
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <div id="mapid"></div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
