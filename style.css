@@ -153,7 +153,7 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg)
+    transform: rotate(360deg);
   }
 }
 
@@ -171,7 +171,7 @@ body {
     top: 10px;
     font-size: 24px;
   }
-  .search-bar{
+  .search-bar {
     top: 50px;
   }
   .data {
@@ -189,7 +189,7 @@ body {
     border: none;
   }
   .data-title {
-    margin-bottom: ;
+    margin-bottom: 5px;
   }
 }
 

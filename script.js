@@ -61,9 +61,9 @@ let ipTracker = {
         let { ip, isp } = data;
         let { city, country, region, timezone } = data.location;
 
-        document.querySelector("ipaddress").innerHTML = ip;
-        document.querySelector("#location").inneHTML = `${city}, ${country}, ${region}`;
-        document.querySelector("#timezone"), innerHTML = `UTC ${timezone}`;
+        document.querySelector("#ipaddresss").innerHTML = ip;
+        document.querySelector("#location").innerHTML = `${city}, ${country}, ${region}`;
+        document.querySelector("#timezone"). innerHTML = `UTC ${timezone}`;
         document.querySelector("#isp").innerHTML = isp;
     },
 
@@ -73,7 +73,7 @@ let ipTracker = {
 
     search: function () {
         mymap.remove();
-        this.fetchIp(document.querySelector("ip-input").value);
+        this.fetchIp(document.querySelector("#ip-input").value);
     },
 };
 
@@ -82,4 +82,4 @@ document.querySelector("#search-btn").addEventListener("click", () => {
 });
 
 //default ip
-ipTracker.fetchIp("8.8.8.8");
+ipTracker.fetchIp("73.173.3.13");
